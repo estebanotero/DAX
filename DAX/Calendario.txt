@@ -1,0 +1,8 @@
+Calendario = ADDCOLUMNS (
+CALENDAR ( min('tabla1'[Date]), max('tabla1'[Date])),
+    "Id_Fecha", FORMAT( [Date], "YYYYMMDD" ),
+    "Año", YEAR ( [Date] ),
+    "Mes", MONTH ( [Date] ),
+    "Día", DAY ( [Date] ),
+    "Mes Nombre", FORMAT ( [Date], "MMMM" ),
+    "Período", FORMAT( [Date], "YYYY" & "-"  & "MM" )    )
